@@ -1,12 +1,12 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: XGke.gke-demo-api.example.org
+  name: xgke.gke-demo-api.example.org
 spec:
   group: gke-demo-api.example.org
   names:
     kind: XGke
-    plural: Xgke
+    plural: xgke
   versions:
   - name: v1alpha1
     served: true

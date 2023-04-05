@@ -16,7 +16,7 @@ spec:
             meta.upbound.io/example-id: gke/v1beta1/backupbackupplan
           labels:
             testing.upbound.io/example-name: primary-cluster
-          #name: primary-cluster
+          name: primary-cluster
           spec:
             forProvider:
               addonsConfig:

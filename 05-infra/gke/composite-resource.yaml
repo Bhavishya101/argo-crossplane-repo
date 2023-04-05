@@ -1,0 +1,6 @@
+apiVersion: gke-demo-api.example.org/v1alpha1
+kind: XGke
+metadata:
+  name: gke-composite-resource
+spec: 
+  location: us-central1

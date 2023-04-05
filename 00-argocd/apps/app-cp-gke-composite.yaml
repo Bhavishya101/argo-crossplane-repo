@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: Xgke-crossplane
+  namespace: argocd
+spec:
+  destination:
+    namespace: gke-demo
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
+    path: 05-infra/gke
+    repoURL: "https://github.com/Bhavishya101/argo-crossplane-repo.git"
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    #automated: {}
+    syncOptions:
+      - CreateNamespace=true

@@ -3,4 +3,4 @@ kind: XTopicBucket
 metadata:
   name: my-composite-resource
 spec: 
-  location: "US"
+  location: "EU"

@@ -5,7 +5,7 @@ metadata:
     meta.upbound.io/example-id: compute/v1beta1/demoinstance
   labels:
     testing.upbound.io/example-name: demo-instance
-  name: crossplane-demo-instance
+  name: cp-vm
 spec:
   forProvider:
     bootDisk:

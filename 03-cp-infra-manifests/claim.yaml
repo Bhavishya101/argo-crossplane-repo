@@ -1,7 +1,7 @@
 apiVersion: custom-api.example.org/v1alpha1
 kind: TopicBucket
 metadata:
-  name: claimed-topic-with-bucket
+  name: claimed-eu-topic-with-bucket
   namespace: test
 spec:
-  location: "US"
+  location: "EU"

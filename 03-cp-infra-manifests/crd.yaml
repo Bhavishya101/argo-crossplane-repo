@@ -1,12 +1,13 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: xgke.gke-demo-api.example.org
+# name must match the spec fields below, and be in the form: <plural>.<group>
+  name: xtopicbuckets.custom-api.example.org
 spec:
-  group: gke-demo-api.example.org
+  group: custom-api.example.org
   names:
-    kind: XGke
-    plural: xgke
+    kind: XTopicBucket
+    plural: xtopicbuckets
   versions:
   - name: v1alpha1
     served: true
@@ -20,11 +21,11 @@ spec:
             properties:
               location:
                 type: string
-                # oneOf:
-                #   - pattern: '^EU$'
-                #   - pattern: '^US$'
+                oneOf:
+                  - pattern: '^EU$'
+                  - pattern: '^US$'
             required:
               - location
   claimNames:
-    kind: Gke
-    plural: gke
+    kind: TopicBucket
+    plural: topicbuckets

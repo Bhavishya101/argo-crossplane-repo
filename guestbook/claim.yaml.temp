@@ -1,9 +1,0 @@
-apiVersion: gke-demo-api.example.org/v1alpha1
-kind: Gke
-metadata:
-  name: claimed-for-gke
-  namespace: gke-demo
-spec:
-  location: "us-central1"
-  # Demo for feature/test
-  # Addedd New sections in f/test

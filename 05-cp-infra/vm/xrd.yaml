@@ -1,12 +1,12 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: xtopicbuckets.custom-api.example.org
+  name: xgce.gce-api.example.org
 spec:
-  group: custom-api.example.org
+  group: gce-api.example.org
   names:
-    kind: XTopicBucket
-    plural: xtopicbuckets
+    kind: XGce
+    plural: xgce
   versions:
   - name: v1alpha1
     served: true
@@ -18,13 +18,14 @@ spec:
           spec:
             type: object
             properties:
-              location:
+              zone:
                 type: string
                 oneOf:
                   - pattern: '^EU$'
                   - pattern: '^US$'
             required:
-              - location
+              - zone
   claimNames:
-    kind: TopicBucket
-    plural: topicbuckets
+    kind: Gce
+    plural: gce
+      

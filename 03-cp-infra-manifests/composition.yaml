@@ -14,6 +14,14 @@ spec:
         spec:
           forProvider:
             location: US
+      patches:
+        - fromFieldPath: "spec.location"
+          toFieldPath: "spec.forProvider.location"
+          transforms:
+            - type: map
+              map: 
+                EU: "EU"
+                US: "US"
     - name: crossplane-quickstart-topic
       base:
         apiVersion: pubsub.gcp.upbound.io/v1beta1
@@ -23,3 +31,11 @@ spec:
             messageStoragePolicy:
               - allowedPersistenceRegions: 
                 - "us-central1"
+      patches:
+        - fromFieldPath: "spec.location"
+          toFieldPath: "spec.forProvider.messageStoragePolicy[*].allowedPersistenceRegions[*]"
+          transforms:
+            - type: map
+              map: 
+                EU: "europe-central2"
+                US: "us-central1"

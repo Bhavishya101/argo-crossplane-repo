@@ -5,5 +5,6 @@ metadata:
   namespace: cp-gke
 spec:
   location: "EU"
+  initialNodeCount: 2
   # Demo for feature/test
   # Addedd New sections in f/test

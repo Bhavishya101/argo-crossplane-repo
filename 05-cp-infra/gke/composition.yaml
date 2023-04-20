@@ -32,4 +32,6 @@ spec:
             - type: map
               map: 
                 EU: "europe-central2"
-                US: "us-central1"    
+                US: "us-central1"
+        - fromFieldPath: "spec.initialNodeCount"
+          toFieldPath: "spec.forProvider.initialNodeCount"

@@ -18,14 +18,9 @@ spec:
           spec:
             type: object
             properties:
-            #   initialNodeCount:
-            #     type: integer
-            #     #default: "us-central1"
-            #     # oneOf:
-            #     #   - pattern: '^EU$'
-            #     #   - pattern: '^US$'
-            # required:
-            #   - initialNodeCount
+              initialNodeCount:
+                type: integer
+                default: 1
               location:
                 type: string
                 default: "US"
@@ -34,6 +29,7 @@ spec:
                   - pattern: '^US$'
             required:
               - location
+              - initialNodeCount
   claimNames:
     kind: Gke
     plural: gke

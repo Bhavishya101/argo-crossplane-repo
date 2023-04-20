@@ -1,8 +1,8 @@
 apiVersion: gke-demo-api.example.org/v1alpha1
 kind: XGke
 metadata:
-  name: gke-composite-resource
+  name: composite-resource-gke
   namespace: cp-gke
 spec: 
-#   location: ""
-  initialNodeCount: 1
+  location: "EU"
+  initialNodeCount: 3
